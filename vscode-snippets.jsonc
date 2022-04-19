@@ -1,0 +1,139 @@
+{
+    "long_dash": {
+        "scope": "", //all languages
+        "prefix": "long_dash",
+        "body": [
+            "—"
+        ],
+        "description": "Write a long dash (em dash) or long hyphen"
+    },
+    "exposant_info": {
+        "scope": "", //all languages
+        "prefix": "exposant_info",
+        "body": [
+            "ⁱ"
+        ],
+        "description": "Write an exposant_info character"
+    },
+    "h1_comment": {
+        "scope": "", //all languages
+        "prefix": "h1_comment",
+        "body": [
+            "###############################################################################",
+            "# ${1:Comment Title}",
+            "###############################################################################",
+            "",
+            ""
+        ],
+        "description": "Write a level 1 comment"
+    },
+    "h2_comment": {
+        "scope": "", //all languages
+        "prefix": "h2_comment",
+        "body": [
+            "#===================================================",
+            "# ${1:Comment Title}",
+            "#===================================================",
+            "",
+            ""
+        ],
+        "description": "Write a level 2 comment"
+    },
+    "h3_comment": {
+        "scope": "", //all languages
+        "prefix": "h3_comment",
+        "body": [
+            "#----------------------",
+            "# ${1:Comment Title}",
+            "#----------------------"
+        ],
+        "description": "Write a level 3 comment"
+    },
+    "h4_comment": {
+        "scope": "", //all languages
+        "prefix": "h4_comment",
+        "body": [
+            "# -> ${1:Comment Title}"
+        ],
+        "description": "Write a level 4 comment"
+    },
+    "cat_text_into_file": {
+        "scope": "",
+        "prefix": "cat_text_into_file",
+        "body": [
+            "cat << 'EOM' > ${1:absolute_file_path}",
+            "FILE_CONTENT",
+            "EOM"
+        ],
+        "description": "Generate a multiple line file with cat (e.g. in terraform user data shell script)"
+    },
+    "boto3_pagination": {
+        "scope": "python",
+        "prefix": "boto3_pagination",
+        "body": [
+            "# -> Get all items from a paginated api call",
+            "all_items = []",
+            "try:",
+            "    pagination = client.get_paginator('${1:MY_CLIENT_FUNCTION}').paginate()",
+            "    for page in pagination:",
+            "        all_items += page[",
+            "            \"${2:MY_CLIENT_FUNCTION}\"",
+            "        ]",
+            "except Exception as e:",
+            "    raise (f\"Error while all items from the paginated api call : {e}\")"
+        ],
+        "description": "Write a level 1 comment"
+    },
+    "generate_try_except": {
+        "scope": "python",
+        "prefix": "generate_try_except",
+        "body": [
+            "try:",
+            "    ${TM_SELECTED_TEXT}${1}",
+            "except Exception as e:",
+            "    raise Exception(f\"An error occured : {e}\")"
+        ],
+        "description": "Generates a basic try/except block"
+    },
+    "generate_logger_info": {
+        "scope": "python",
+        "prefix": "linfo",
+        "body": [
+            "logger.info(f\"${1:description} : {${2:variable}}\")"
+        ],
+        "description": "Generates a basic info logger instance"
+    },
+    "generate_os_environ": {
+        "scope": "python",
+        "prefix": "generate_os_environ",
+        "body": [
+            "${1:VARIABLE_NAME}=os.environ[\"${1:VARIABLE_NAME}\"]"
+        ],
+        "description": "Generates an OS environ declaration"
+    },
+    "generate_if_main": {
+        "scope": "python",
+        "prefix": "ifmain",
+        "body": [
+            "if __name__ == \"__main__\":",
+            "    ${1:content}"
+        ],
+        "description": "Generates an if main condition as entry for the python script"
+    },
+    "generate_flake_8_ignore": {
+        "scope": "python",
+        "prefix": "generate_flake_8_ignore",
+        "body": [
+            " # noqa: ${1:E501}"
+        ],
+        "description": "Generate a ignore comment for flake8 bullshit"
+    },
+    "tfsec_ignore": {
+        "scope": "terraform",
+        "prefix": "tfsec_ignore",
+        "body": [
+            "#tfsec:ignore:${1:AWSXXX}"
+        ],
+        "description": "Add a tfsec ignore comment"
+    }
+}
