@@ -5,58 +5,36 @@
     "workbench.editor.enablePreview": true,
     "workbench.colorTheme": "Atom One Dark",
     "terminal.integrated.fontSize": 13.5,
+    # "terminal.integrated.fontFamily": "\"MesloLGS NF\"",
+    # "editor.fontFamily": "\"MesloLGS NF\"",
     "[terraform]": {
         "editor.tabSize": 4,
         "editor.formatOnSave": true,
         "editor.tabCompletion": "on"
     },
-    "terraform.languageServer": {
-        "external": true,
-        "pathToBinary": "",
-        "args": [
-            "serve"
-        ],
-        "maxNumberOfProblems": 100,
-        "trace.server": "off"
+    "[markdown]": {
+        "editor.lineHeight": 26,
+        // "editor.wordWrap": "wordWrapColumn",
+        // "editor.wordWrapColumn": 150,
+        // "editor.rulers": [
+        //     150
+        // ],
+        "editor.lineNumbers": "off",
+        "editor.quickSuggestions": false,
+        "editor.minimap.enabled": false,
+        "editor.padding.top": 25,
+        "editor.occurrencesHighlight": false
     },
-    "editor.tokenColorCustomizations": {
-        "[Atom One Dark]": {
-            "textMateRules": [
-                {
-                    "scope": "entity.name.type.terraform",
-                    "settings": {
-                        "foreground": "#61AFEF"
-                    }
-                },
-                {
-                    "scope": "string.quoted.double.terraform",
-                    "settings": {
-                        "foreground": "#98C379"
-                    }
-                },
-                {
-                    "scope": "support.function.builtin.terraform",
-                    "settings": {
-                        "foreground": "#47acc5"
-                    }
-                },
-                {
-                    "scope": "variable.declaration.terraform, variable.other.readwrite.terraform, variable.other.member.terraform ariable.other.member.terraform, meta.mapping.key.terraform, string.unquoted.terraform, variable.other.member.terraform",
-                    "settings": {
-                        "foreground": "#ABB2B2"
-                    }
-                },
-                {
-                    "scope": "support.constant.terraform",
-                    "settings": {
-                        "foreground": "#d6675b"
-                    }
-                }
-            ]
-            // See official doc : https://code.visualstudio.com/docs/getstarted/themes#_customizing-a-color-theme
-            // See blog post : https://yongnicholaskim.medium.com/visual-studio-code-color-theme-customization-for-newbies-880923e83dc
+    "todohighlight.keywords": [
+        {
+            "text": "TODO",
+            "color": "white",
+            // "border": "1px solid yellow",
+            // "borderRadius": "3px", //NOTE: using borderRadius along with `border` or you will see nothing change
+            "backgroundColor": "orange",
+            //other styling properties goes here ... 
         }
-    },
+    ],
     "git.confirmSync": false,
     "diffEditor.renderSideBySide": false,
     "terminal.integrated.tabs.enabled": true,
@@ -68,9 +46,9 @@
     "git.enableSmartCommit": true,
     "sync.autoUpload": true,
     "sync.autoDownload": true,
-    "terraform-ls.experimentalFeatures": {},
     "workbench.startupEditor": "newUntitledFile",
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.wordWrapColumn": 79,
     "editor.formatOnSave": true
+    "redhat.telemetry.enabled": false,
 }
