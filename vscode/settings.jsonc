@@ -1,54 +1,40 @@
 {
-    "workbench.statusBar.visible": false,
-    "workbench.colorCustomizations": {},
     "workbench.editor.wrapTabs": false,
     "workbench.editor.enablePreview": true,
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "One Dark Pro Mix",
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editorAssociations": {
+        "*.csv": "default"
+    },
     "terminal.integrated.fontSize": 13.5,
-    # "terminal.integrated.fontFamily": "\"MesloLGS NF\"",
-    # "editor.fontFamily": "\"MesloLGS NF\"",
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.middleClickBehavior": "paste",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "autopep8.args": [
+        "--max-line-length",
+        "120",
+        "--experimental"
+    ],
     "[terraform]": {
-        "editor.tabSize": 4,
+        "editor.tabSize": 2,
         "editor.formatOnSave": true,
         "editor.tabCompletion": "on"
     },
-    "[markdown]": {
-        "editor.lineHeight": 26,
-        // "editor.wordWrap": "wordWrapColumn",
-        // "editor.wordWrapColumn": 150,
-        // "editor.rulers": [
-        //     150
-        // ],
-        "editor.lineNumbers": "off",
-        "editor.quickSuggestions": false,
-        "editor.minimap.enabled": false,
-        "editor.padding.top": 25,
-        "editor.occurrencesHighlight": false
-    },
-    "todohighlight.keywords": [
-        {
-            "text": "TODO",
-            "color": "white",
-            // "border": "1px solid yellow",
-            // "borderRadius": "3px", //NOTE: using borderRadius along with `border` or you will see nothing change
-            "backgroundColor": "orange",
-            //other styling properties goes here ... 
-        }
-    ],
-    "git.confirmSync": false,
-    "diffEditor.renderSideBySide": false,
-    "terminal.integrated.tabs.enabled": true,
-    "editor.wordWrap": "on",
+    "terraform.languageServer.enable": true,
     "editor.rulers": [
-        79
+        120
     ],
-    "workbench.editor.tabSizing": "shrink",
-    "git.enableSmartCommit": true,
-    "sync.autoUpload": true,
-    "sync.autoDownload": true,
-    "workbench.startupEditor": "newUntitledFile",
+    "editor.wordWrapColumn": 120,
+    "editor.formatOnSave": true,
+    "diffEditor.renderSideBySide": false,
     "diffEditor.ignoreTrimWhitespace": false,
-    "editor.wordWrapColumn": 79,
-    "editor.formatOnSave": true
-    "redhat.telemetry.enabled": false,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "markdown-preview-enhanced.codeBlockTheme": "github.css",
+    "markdown-preview-enhanced.previewTheme": "one-light.css",
+    "files.autoSave": "afterDelay",
+    "window.zoomLevel": 1
 }

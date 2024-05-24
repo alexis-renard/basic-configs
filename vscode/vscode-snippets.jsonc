@@ -120,20 +120,11 @@
         ],
         "description": "Generates an if main condition as entry for the python script"
     },
-    "generate_flake_8_ignore": {
-        "scope": "python",
-        "prefix": "generate_flake_8_ignore",
+    "trivy_ignore": {
+        "prefix": "trivy_ignore",
         "body": [
-            " # noqa: ${1:E501}"
+            "#trivy:ignore:${1:AVD-XXX-0000}"
         ],
-        "description": "Generate a ignore comment for flake8 bullshit"
-    },
-    "tfsec_ignore": {
-        "scope": "terraform",
-        "prefix": "tfsec_ignore",
-        "body": [
-            "#tfsec:ignore:${1:AWSXXX}"
-        ],
-        "description": "Add a tfsec ignore comment"
+        "description": "Add a trivy ignore comment"
     }
 }
