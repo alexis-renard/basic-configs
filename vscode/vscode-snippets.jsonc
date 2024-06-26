@@ -126,5 +126,17 @@
             "#trivy:ignore:${1:AVD-XXX-0000}"
         ],
         "description": "Add a trivy ignore comment"
+    },
+    "generate_base_note": {
+        "prefix": "bn",
+        "body": [
+            "# Overview",
+            "${1:}",
+            "",
+            "# Usage",
+            "",
+            "<!-- # Useful links  -->"
+        ],
+        "description": "Generate a base structure for a note"
     }
 }
