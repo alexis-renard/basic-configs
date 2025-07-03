@@ -2,7 +2,7 @@
 # PATH related
 #===================================================
 
-PATH="$PATH:$HOME/.local/bin" #for pip install --user
+PATH="$PATH:$HOME/.local/bin" #for uv, asdf, pip --user, etc.
 PATH="$PATH:$HOME/softs"
 
 #===================================================
